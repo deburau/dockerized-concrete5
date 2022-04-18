@@ -1,4 +1,6 @@
-### Dockerized version of Concrete CMS. Find out more about Concrete CMS at https://www.concretecms.com/
+### Dockerized version of Concrete CMS
+
+Find out more about Concrete CMS at https://www.concretecms.com/
 
 This image is a fork of https://github.com/Tomcat128/dockerized-concrete5 with the following bugfixes and enhancements:
 
