@@ -1,6 +1,14 @@
 FROM php:7.4.28-apache
 
-MAINTAINER Tomasz Fehrenbacher admin@fewobacher.de
+LABEL maintainer="concretecms@flexoft.net"
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.name="concretecms"
+LABEL org.label-schema.description="Docker image for the Concrete CMS based on https://github.com/tomcat128/dockerized-concrete5"
+LABEL org.label-schema.url="https://www.concretecms.com/"
+LABEL org.label-schema.vcs-url="https://github.com/deburau/dockerized-concrete5"
+LABEL org.label-schema.vcs-ref="${VCS_REF}"
+LABEL org.label-schema.vendor="PortlandLabs"
+LABEL org.label-schema.version="${VERSION}"
 
 ENV C5_VERSION 9.0.2
 ENV C5_URL https://www.concretecms.org/download_file/3254ddbf-35f0-4c92-8ed1-1fb6b9c0f0d4
