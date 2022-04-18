@@ -1,4 +1,4 @@
-FROM php:8.1.3-apache
+FROM php:7.4.28-apache
 
 MAINTAINER Tomasz Fehrenbacher admin@fewobacher.de
 
@@ -49,9 +49,9 @@ RUN cd /usr/local/src \
 
 RUN chown -R www-data:www-data /srv/app
 
-RUN echo "Europe/Berlin" > /etc/timezone \
-    && ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
-    && dpkg-reconfigure -f noninteractive tzdata
-
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+COPY root/ /
+
+CMD ["/docker-init.sh"]
