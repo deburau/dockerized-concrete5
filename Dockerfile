@@ -62,4 +62,9 @@ RUN apt-get clean \
 
 COPY root/ /
 
+VOLUME /srv/app/public/application/blocks
+VOLUME /srv/app/public/packages
+VOLUME /srv/app/public/application/config
+VOLUME /srv/app/public/application/files
+
 CMD ["/docker-init.sh"]
